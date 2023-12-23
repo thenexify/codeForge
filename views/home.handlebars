@@ -1,0 +1,62 @@
+<section class="banner">
+    <p class="lg-2">CodeForge</p>
+</section>
+<section class="cards">
+    <div class="center">
+        <p class="lg">Browse Shortcuts</p>
+    </div>
+    <div class="cards-container">
+    <div class="card-item">
+        <div class="img">
+            <img src="/static/img/img1.png" alt="HTML">
+        </div>
+        <div class="info">
+            <p class="title">HTML Shortcuts</p>
+            <a href="/s/html" class="red"><i class="bi bi-arrow-right-short"></i></a>
+        </div>
+    </div>
+    <div class="card-item">
+        <div class="img">
+            <img src="/static/img/img2.png" alt="CSS">
+        </div>
+        <div class="info">
+            <p class="title">CSS Shortcuts</p>
+            <a href="/s/css" class="red"><i class="bi bi-arrow-right-short"></i></a>
+        </div>
+    </div>
+    <div class="card-item">
+        <div class="img">
+            <img src="/static/img/img3.png" alt="JavaScript">
+        </div>
+        <div class="info">
+            <p class="title">JS Shortcuts</p>
+            <a href="/s/js" class="red"><i class="bi bi-arrow-right-short"></i></a>
+        </div>
+    </div>
+    <div class="card-item">
+        <div class="img">
+            <img src="/static/img/img4.png" alt="Node JS">
+        </div>
+        <div class="info">
+            <p class="title">NodeJS Shortcuts</p>
+            <a href="/s/js" class="red"><i class="bi bi-arrow-right-short"></i></a>
+        </div>
+    </div>
+</div>
+</section>
+<section class="popular-shortcuts">
+    <div class="center">
+        <p class="lg">Popular Shortcuts</p>
+    </div>
+    <div class="shcut-container">
+        {{#each shortcut}}
+        <div class="shortcut">
+            <div class="title">
+                <p class="lg-d">{{this.title}}</p>
+                <button class="copy" id="{{this.id}}"><i class="bi bi-link-45deg"></i></button>
+            </div>
+                <pre class="language-{{this.language}}"><code>{{this.code}}</code></pre>
+        </div>
+    {{/each}}
+    </div>
+</section>

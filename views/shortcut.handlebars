@@ -1,0 +1,16 @@
+<section class="popular-shortcuts">
+    <div class="center">
+        <p class="lg">{{language}} Shortcuts</p>
+    </div>
+    <div class="shcut-container">
+        {{#each shortcut}}
+            <div class="shortcut">
+            <div class="title">
+                <p class="lg-d">{{this.title}}</p>
+                <button class="copy" id="{{this.id}}"><i class="bi bi-link-45deg"></i></button>
+            </div>
+                <pre class="language-{{this.language}}"><code>{{this.code}}</code></pre>
+        </div>
+        {{/each}}
+    </div>
+</section>
